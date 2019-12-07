@@ -54,6 +54,8 @@ public class TopPageIndexServlet extends HttpServlet {
                                      .setParameter("employee", login_employee)
                                      .getSingleResult();
 
+
+
         em.close();
 
         request.setAttribute("reports", reports);

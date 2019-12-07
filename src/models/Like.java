@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllLikes",
-            query = "SELECT l FROM Employee AS l ORDER BY l.id DESC"
+            query = "SELECT l FROM Like AS l ORDER BY l.id DESC"
             ),
     @NamedQuery(
             name = "getLikesCount",
@@ -42,7 +42,6 @@ public class Like {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
-
     public Integer getId() {
         return id;
     }
@@ -59,20 +58,22 @@ public class Like {
         this.report = report;
     }
 
-        public Employee getEmployee() {
-            return employee;
-        }
+    public Employee getEmployee() {
+        return employee;
+    }
 
-        public void setEmployee(Employee employee) {
-            this.employee = employee;
-        }
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
 
-        public Timestamp getUpdated_at() {
-            return updated_at;
-        }
+    public Timestamp getUpdated_at() {
+        return updated_at;
+    }
 
-        public void setUpdated_at(Timestamp updated_at) {
-            this.updated_at = updated_at;
-        }
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
+    }
+
+
 
 }
