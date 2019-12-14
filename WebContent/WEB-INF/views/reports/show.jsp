@@ -38,8 +38,8 @@
                     </tbody>
                 </table>
                 <input type="hidden" name="_token" value="${_token}" />
-                <button type="submit">イイね!</button>
-                <button type="submit">取消</button>
+                 <p><a href="<c:url value="/reports/like?id=${report.id}&?employee_id=${sessionScope.login_employee.id}" />">イイね!</a></p>
+                 <p><a href="<c:url value="/reports/cancel?id=${report.id}&?employee_id=${sessionScope.login_employee.id}" />">取消</a></p>
                 <c:if test="${sessionScope.login_employee.id == report.employee.id}">
                     <p><a href="<c:url value="/reports/edit?id=${report.id}" />">この日報を編集する</a></p>
                 </c:if>
